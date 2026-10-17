@@ -1,0 +1,525 @@
+/* ============================================================
+   CSS VARIABLES — Design Tokens
+   ============================================================ */
+:root {
+  --color-bg: #f5ebdc;
+  --color-title: #502314;
+  --color-subtitle: rgba(80, 35, 20, 0.7);
+  --color-white: #ffffff;
+  --color-white-80: rgba(255, 255, 255, 0.8);
+
+  --grad-red: linear-gradient(
+    127.22deg,
+    rgb(220, 38, 38) 0%,
+    rgb(153, 27, 27) 100%
+  );
+  --grad-brown: linear-gradient(
+    127.22deg,
+    rgb(217, 119, 6) 0%,
+    rgb(146, 64, 14) 100%
+  );
+  --grad-yellow: linear-gradient(
+    127.22deg,
+    rgb(234, 179, 8) 0%,
+    rgb(161, 98, 7) 100%
+  );
+  --grad-amber: linear-gradient(
+    127.22deg,
+    rgb(251, 191, 36) 0%,
+    rgb(217, 119, 6) 100%
+  );
+  --grad-green: linear-gradient(
+    127.22deg,
+    rgb(34, 197, 94) 0%,
+    rgb(21, 128, 61) 100%
+  );
+  --grad-crimson: linear-gradient(
+    127.22deg,
+    rgb(239, 68, 68) 0%,
+    rgb(214, 35, 0) 100%
+  );
+
+  --font-display: "Titan One", sans-serif;
+  --font-body: "Open Sans", sans-serif;
+}
+
+/* ============================================================
+   RESET
+   ============================================================ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-bg);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================================
+   SEÇÃO
+   ============================================================ */
+.ingredients-section {
+  background-color: var(--color-bg);
+  width: 100%;
+  padding: 96px 40px;
+  min-height: 652px;
+}
+
+.ingredients-container {
+  max-width: 1094px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ============================================================
+   TÍTULO
+   ============================================================ */
+.ingredients-title {
+  font-family: var(--font-display);
+  font-size: 72px;
+  line-height: 1;
+  color: var(--color-title);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.ingredients-title.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================================
+   SUBTÍTULO
+   ============================================================ */
+.ingredients-subtitle {
+  font-family: var(--font-body);
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 400;
+  color: var(--color-subtitle);
+  max-width: 645px;
+  margin: 0 auto 80px;
+
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: 0.2s;
+}
+
+.ingredients-subtitle.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================================
+   CARDS WRAPPER
+   ============================================================ */
+.cards-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: nowrap;
+  overflow: visible;
+}
+
+/* ============================================================
+   CARD — base
+   ============================================================ */
+.card {
+  position: relative;
+  width: 162px;
+  min-height: 214px;
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 24px;
+  flex-shrink: 0;
+  text-align: center;
+  cursor: default;
+
+  /* Separar scale e translate do transform da animação */
+  scale: 1;
+  translate: 0 0;
+
+  opacity: 0;
+  will-change: scale, translate, opacity;
+
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.1),
+    0 12px 24px rgba(0, 0, 0, 0.12);
+
+  /* Transição do hover — só scale e translate */
+  transition:
+    scale 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+    translate 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    filter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================================
+   CARD — animação de entrada (bounce)
+   ============================================================ */
+.card.is-visible {
+  animation: fadeInBounce 0.65s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.card:nth-child(1) {
+  animation-delay: 0s;
+}
+.card:nth-child(2) {
+  animation-delay: 0.12s;
+}
+.card:nth-child(3) {
+  animation-delay: 0.24s;
+}
+.card:nth-child(4) {
+  animation-delay: 0.36s;
+}
+.card:nth-child(5) {
+  animation-delay: 0.48s;
+}
+.card:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeInBounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.85) translateY(16px);
+  }
+  55% {
+    opacity: 1;
+    transform: scale(1.03) translateY(-8px);
+  }
+  75% {
+    transform: scale(0.98) translateY(6px);
+  }
+  90% {
+    transform: scale(1.01) translateY(-3px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* ============================================================
+   CARD — hover (não conflita com a animação)
+   ============================================================ */
+.card.is-visible:hover {
+  scale: 1.1;
+  translate: 0 -1px;
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.15),
+    0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================================
+   ÍCONE
+   ============================================================ */
+.card__icon {
+  position: absolute;
+  top: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  line-height: 1;
+}
+
+.card__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ============================================================
+   CORPO DO CARD
+   ============================================================ */
+.card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.card__name {
+  font-family: var(--font-display);
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--color-white);
+  font-weight: 300;
+}
+
+.carne-card__name {
+  font-family: var(--font-display);
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--color-white);
+  font-weight: 300;
+}
+
+.bacon-card__name {
+  font-family: var(--font-display);
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--color-white);
+  font-weight: 300;
+}
+
+.alface-card__name {
+  font-family: var(--font-display);
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--color-white);
+  font-weight: 300;
+}
+
+.tomate-card__name {
+  font-family: var(--font-display);
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--color-white);
+  font-weight: 300;
+}
+
+.card__desc {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 400;
+  color: var(--color-white-80);
+}
+
+/* ============================================================
+   GRADIENTES DOS CARDS
+   ============================================================ */
+.card--red {
+  background: var(--grad-red);
+}
+.card--brown {
+  background: var(--grad-brown);
+}
+.card--yellow {
+  background: var(--grad-yellow);
+}
+.card--amber {
+  background: var(--grad-amber);
+}
+.card--green {
+  background: var(--grad-green);
+}
+.card--crimson {
+  background: var(--grad-crimson);
+}
+
+/* ============================================================
+   RESPONSIVIDADE
+   ============================================================ */
+@media (max-width: 960px) {
+  .ingredients-section {
+    padding: 82px 32px;
+    min-height: auto;
+  }
+
+  .ingredients-container {
+    max-width: 920px;
+    height: 1050px;
+  }
+
+  .ingredients-title {
+    font-size: 56px;
+  }
+
+  .ingredients-subtitle {
+    font-size: 18px;
+    max-width: 560px;
+    margin-bottom: 56px;
+  }
+
+  .cards-wrapper {
+    gap: 18px;
+  }
+
+  .card {
+    width: 148px;
+    height: 243.97px;
+  }
+
+  .card__icon {
+    top: 22px;
+    width: 58px;
+    height: 58px;
+  }
+
+  .card__name {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .card__desc {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: 720px) {
+  .ingredients-section {
+    padding: 64px 18px;
+  }
+
+  .ingredients-title {
+    font-size: 42px;
+    margin-bottom: 16px;
+  }
+
+  .ingredients-subtitle {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 32px;
+  }
+
+  .cards-wrapper {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: calc(50% - 6px);
+    min-width: 0;
+    min-height: 170px;
+    border-radius: 20px;
+    padding-bottom: 16px;
+  }
+
+  .card__icon {
+    top: 218px;
+    width: 54px;
+    height: 54px;
+  }
+
+  .card__body {
+    gap: 2px;
+  }
+
+  .card__name {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .card__desc {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ingredients-section {
+    padding: 48px 14px 56px;
+  }
+
+  .ingredients-title {
+    font-size: 49px;
+    margin: 96px auto 24px auto;
+  }
+
+  .ingredients-subtitle {
+    font-size: 17px;
+    line-height: 20px;
+    max-width: 300px;
+    margin-bottom: 65px;
+  }
+
+  .cards-wrapper {
+    gap: 10px;
+  }
+
+  .card {
+    width: 160px;
+    min-height: 154px;
+    border-radius: 24px;
+    margin: 0 10px 10px 0;
+  }
+
+  .card__icon {
+    top: 42px;
+    width: 62px;
+    height: 62px;
+  }
+
+  .card__name {
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+    margin: 0 0 19px 0;
+  }
+
+  /* .carne-card__name {
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+    margin: 0 0 34px 0;
+  }
+  */
+
+  .bacon-card__name {
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+    margin: 0 0 10px 0;
+  }
+
+  .alface-card__name {
+    font-size: 17px;
+    line-height: 26px;
+    font-weight: 400;
+    margin: 0 0 8px 0;
+  }
+
+  .tomate-card__name {
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+    margin: 0 0 10px 0;
+  }
+
+  .card__desc {
+    font-size: 11px;
+    line-height: 16px;
+    margin: 0 0 20px 0;
+  }
+}
+
+/* ============================================================
+   ACESSIBILIDADE
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  .ingredients-title,
+  .ingredients-subtitle,
+  .card {
+    opacity: 1;
+    transform: none;
+    animation: none;
+    transition: none;
+  }
+}

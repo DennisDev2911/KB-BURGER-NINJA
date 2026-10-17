@@ -1,0 +1,889 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="KB Burger Ninja - Hambúrgueres artesanais e comida de qualidade"
+    />
+    <meta name="theme-color" content="#0066CC" />
+
+    <title>KB Burger Ninja</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titan+One&family=Open+Sans:wght@400;500;600;700;900&family=Bebas+Neue&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/app-banner.css" />
+    <link rel="stylesheet" href="css/App-banner-king.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/kings-bacon.css" />
+    <link rel="stylesheet" href="css/king-dobro.css" />
+    <link rel="stylesheet" href="css/ingredientes-teste.css">
+    
+    <link rel="stylesheet" href="css/hmm-section.css" />
+    <link rel="stylesheet" href="css/ninja-carousel.css" />
+    <link rel="stylesheet" href="css/menu-flip.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    
+
+    <!-- Favicon -->
+    <!-- <link rel="icon" type="image/svg+xml" href="public/images/favicon.svg"> -->
+  </head>
+  <body>
+    <!-- ============================================
+         HEADER — Alert Bar + Navigation + Mobile Drawer
+         ============================================ -->
+    <header class="header">
+      <!-- Alert Bar -->
+      <div class="alert-bar" role="region" aria-label="Aviso importante">
+        <p class="alert-text">
+          ATENÇÃO! Descontos e cupons promocionais só podem ser obtidos em
+          nossos canais oficiais.
+        </p>
+      </div>
+
+      <!-- Navigation Bar -->
+      <nav class="navbar">
+        <!-- Logo -->
+        <a href="#" class="logo" aria-label="King Burger - Início">
+          <img
+            src="public/images/logo-icon.svg"
+            alt=""
+            class="logo-icon"
+            aria-hidden="true"
+          />
+          <span class="logo-text">
+            <span class="logo-text-king">KING</span>
+            <span class="logo-text-burger">BURGER</span>
+          </span>
+        </a>
+
+        <nav class="nav-links">
+          <a href="#menu" class="nav-link">Menu</a>
+          <a href="#king-section" class="nav-link">Promoções</a>
+          <a href="#kids" class="nav-link">Kids Menu</a>
+          <a href="#app" class="nav-link">App</a>
+        </nav>
+
+        <!-- Mobile Hamburger Button -->
+        <button
+          class="menu-toggle"
+          data-menu-toggle
+          aria-label="Abrir menu de navegação"
+          aria-expanded="false"
+        >
+          <span class="menu-icon"></span>
+          <span class="menu-icon"></span>
+          <span class="menu-icon"></span>
+        </button>
+      </nav>
+
+      <!-- Mobile Menu Drawer -->
+      <div
+        class="mobile-drawer"
+        data-menu
+        role="navigation"
+        aria-label="Menu de navegação mobile"
+      >
+        <button class="drawer-close" aria-label="Fechar menu">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+        <a href="#menu" class="drawer-link">Menu</a>
+        <a href="#king-section" class="drawer-link">Promoções</a>
+        <a href="#kids" class="drawer-link">Kids Menu</a>
+        <a href="#app" class="drawer-link">App</a>
+      </div>
+    </header>
+
+    
+      <!-- ============================================
+           HERO SECTION — Seção de Destino Premium
+           ============================================ -->
+      <section class="hero" id="hero">
+        <div class="hero-content">
+          <!-- Left Column — Text Content -->
+          <div class="hero-text">
+            <!-- Badge -->
+            <div class="hero-badge">Nova Promoção</div>
+
+            <!-- Title -->
+            <h1 class="hero-title">
+              <span class="hero-title-line-1">KB NINJA</span>
+              <span class="hero-title-line-2">CHEGOU!</span>
+            </h1>
+
+            <!-- Description -->
+            <p class="hero-description">
+              Nosso novo combo especial com brinde exclusivo das
+              <span class="highlight">Tartarugas Ninja!</span>
+            </p>
+
+            <!-- CTA Button -->
+            <button class="hero-cta">Quero Meu Combo!</button>
+          </div>
+
+          <!-- Right Column — Product Image -->
+          <div class="hero-image-wrapper">
+            <div class="hero-image-glow"></div>
+            <img
+              src="public/images/hero-burguer-gif.gif"
+              alt="KB Ninja Burger - Hambúrguer premium com pão verde, frango frito, bacon e coroa dourada"
+              class="hero-image"
+            />
+          </div>
+        </div>
+
+        <!-- Scroll Hint -->
+        <div class="scroll-hint">
+          <span class="scroll-hint-text">Confira mais</span>
+          <svg
+            class="scroll-hint-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </div>
+      </section>
+
+      
+
+      <!-- ============================================
+           KINGS BACON SECTION
+           ============================================ -->
+      <section class="kings-bacon" id="kings-bacon">
+        <div class="kings-bacon-container">
+          <header class="kings-bacon-header">
+            <h2 class="kings-bacon-title" data-animate="slide-up">THE KINGS</h2>
+            <h3 class="kings-bacon-subtitle" data-animate="slide-up" data-delay="150">BACON</h3>
+          </header>
+
+          <div class="kings-bacon-grid">
+            <div class="kings-bacon-card-1" data-animate="slide-right-to-left" data-delay="300">
+              <h4 class="kings-bacon-card-title">KING BACON CHICKEN</h4>
+              <img
+                src="public/images/the-king-bacon-hamb1.png"
+                alt="King Bacon Chicken Burger - Hambúrguer com frango e bacon"
+                class="kings-bacon-card-image"
+              />
+            </div>
+
+            <div class="kings-bacon-card kings-bacon-card-central" data-animate="fade-in" data-delay="500">
+              <h4 class="kings-bacon-card-title">KING DUPLO BACON</h4>
+              <img
+                src="public/images/the-king-bacon-hamb2.png"
+                alt="King Duplo Bacon Burger - Hambúrguer duplo com bacon extra"
+                class="kings-bacon-card-image"
+              />
+            </div>
+
+            <div class="kings-bacon-card-1" data-animate="slide-left-to-right" data-delay="700">
+              <h4 class="kings-bacon-card-title">KING BACON</h4>
+              <img
+                src="public/images/the-king-bacon-bacon.png"
+                alt="King Bacon Burger - Hambúrguer clássico com bacon"
+                class="kings-bacon-card-image"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================
+           KING EM DOBRO SECTION
+           ============================================ -->
+
+     <section class="king-section" id="king-section"> 
+        <!-- Hero image (sangra verticalmente) -->
+        <div class="king-hero">
+          <img
+            src="public/images/background-2-burguers.png"
+            alt="Hambúrguer King em Dobro"
+          />
+        </div> 
+
+          <!-- Conteúdo principal -->
+       <div class="king-content"> 
+          <!-- Bloco de texto esquerdo -->
+          <div class="king-text" id="kingText">
+            <span class="king-label" id="kingLabel">King em dobro</span>
+
+            <div class="king-quantity">
+              <span class="num" id="kingNum">0</span>
+              <span class="burgers-label" id="burgersLabel">BURGERS</span>
+            </div>
+
+            <span class="king-subtitle" id="kingSubtitle">A partir de</span>
+
+            <div class="king-price">
+              <span class="currency">R$</span>
+              <span class="value" id="kingPrice">0</span>
+              <span class="cents">,<span id="kingCents">00</span></span>
+            </div>
+
+            <p class="king-disclaimer">
+              Os preços promocionais são válidos por tempo determinado, conforme
+              as unidades participantes e demais condições e critérios.
+            </p>
+          </div>
+          <!--King-text-->
+
+          <!-- Card de seleção direito -->
+          <div class="king-card" id="kingCard">
+            <p class="king-card-title">Escolha entre:</p>
+
+            <div class="king-mini-cards">
+              <!-- Mini-card 1 -->
+              <div class="king-mini-item">
+                <div class="king-mini-card">
+                  <div class="king-mini-card-placeholder">
+                    <img src="public/images/Chicken-duplo.png" alt="" />
+                    <!-- <span class="burger-icon">🍔</span> -->
+                  </div>
+                </div>
+                <span class="king-mini-name">Chicken Duplo</span>
+              </div>
+
+              <!-- Mini-card 2 -->
+              <div class="king-mini-item">
+                <div class="king-mini-card">
+                  <div class="king-mini-card-placeholder">
+                    <img src="public/images/Stacker-duplo-bacon.png" alt="" />
+                    <!-- <span class="burger-icon">🍔</span> -->
+                  </div>
+                </div>
+                <span class="king-mini-name">Stacker Duplo<br />Bacon</span>
+              </div>
+
+              <!-- Mini-card 3 -->
+              <div class="king-mini-item">
+                <div class="king-mini-card">
+                  <div class="king-mini-card-placeholder">
+                    <img src="public/images/Rodeio-duplo.png" alt="" />
+                    <!-- <span class="burger-icon">🍔</span> -->
+                  </div>
+                </div>
+                <span class="king-mini-name">Rodeio Duplo</span>
+              </div>
+            </div>
+          </div>
+          <!--king-card-->
+        </div>
+        <!--king-content-->
+      </section>
+      <!--king-section-->
+
+      
+
+      <!-- Conteúdo adicional aqui -->
+    </main>
+
+
+
+
+<!-- ============================================
+           INGREDIENTES PREMIUM SECTION
+           ============================================ -->
+
+
+    <section class="ingredients-section">
+      <div class="ingredients-container">
+        <!-- Cabeçalho -->
+        <h2 class="ingredients-title">INGREDIENTES PREMIUM</h2>
+        <p class="ingredients-subtitle">
+          Selecionamos apenas os melhores ingredientes para garantir o sabor
+          inigualável
+        </p>
+
+        <!-- Grid de cards -->
+        <div class="cards-wrapper">
+          <!-- Card 1 — Carne Premium -->
+          <div class="card card--red">
+            <span class="card__icon" aria-hidden="true">
+              <img src="public/images/ingrediente-1.png" alt="Carne Premium" />
+            </span>
+            <div class="card__body">
+              <h3 class="card__name">Carne<br />Premium</h3>
+              <p class="card__desc">100% Angus</p>
+            </div>
+          </div>
+          <!-- Card red-->
+
+          <!-- Card 2 — Bacon Crocante -->
+          <div class="card card--brown">
+            <span class="card__icon" aria-hidden="true">
+              <img src="public/images/ingrediente-2.png" alt="Bacon Crocante" />
+            </span>
+            <div class="card__body">
+              <h3 class="bacon-card__name">Bacon<br />Crocante</h3>
+              <p class="card__desc">Temperado<br />artesanalmente</p>
+            </div>
+          </div>
+
+          <!-- Card 3 — Queijo Derretido -->
+          <div class="card card--yellow">
+            <span class="card__icon" aria-hidden="true">
+              <img
+                src="public/images/ingrediente-3.png"
+                alt="Queijo Derretido"
+              />
+            </span>
+            <div class="card__body">
+              <h3 class="card__name">Queijo<br />Derretido</h3>
+              <p class="card__desc">Cheddar especial</p>
+            </div>
+          </div>
+
+          <!-- Card 4 — Pão Artesanal -->
+          <div class="card card--amber">
+            <span class="card__icon" aria-hidden="true">
+              <img src="public/images/ingrediente-4.png" alt="Pão Artesanal" />
+            </span>
+            <div class="card__body">
+              <h3 class="card__name">Pão<br />Artesanal</h3>
+              <p class="card__desc">Feito na hora</p>
+            </div>
+          </div>
+
+          <!-- Card 5 — Alface Fresca -->
+          <div class="card card--green">
+            <span class="card__icon" aria-hidden="true">
+              <img src="public/images/ingrediente-5.png" alt="Alface Fresca" />
+            </span>
+            <div class="card__body">
+              <h3 class="alface-card__name">Alface<br />Fresca</h3>
+              <p class="card__desc">Selecionada<br />diariamente</p>
+            </div>
+          </div>
+
+          <!-- Card 6 — Tomate Selecionado -->
+          <div class="card card--crimson">
+            <span class="card__icon" aria-hidden="true">
+              <img
+                src="public/images/ingrediente-6.png"
+                alt="Tomate Selecionado"
+              />
+            </span>
+            <div class="card__body">
+              <h3 class="tomate-card__name">Tomate<br />Selecionado</h3>
+              <p class="card__desc">Da fazenda para<br />você</p>
+            </div>
+          </div>
+        </div>
+        <!-- /.cards-wrapper -->
+      </div>
+      <!-- /.ingredients-container -->
+    </section>
+>
+
+
+
+<!-- king-text wrapping tudo -->
+ <!--
+<div class="king-text">
+
+  <span class="king-label">King em dobro</span>
+
+  <div class="king-quantity">
+    <span class="num">0</span>
+    <div>
+      <span class="burgers-label">BURGERS</span>
+      <span class="king-subtitle">A partir de</span>
+    </div>
+  </div>
+
+  <div class="king-price">
+    <span class="currency">R$</span>
+    <span class="value">0</span>
+    <span class="cents">,<span>00</span></span>
+  </div>
+
+</div>
+
+<div class="king-card">
+  <!-- conteúdo do card -->
+<!--</div> -->
+
+
+
+
+
+    <!-- ============================================
+         HMMM SECTION — Crispy Chicken Nuggets
+         ============================================ -->
+    <section class="hmm-section">
+      <div class="hmm-container">
+        <header class="hmm-header">
+          <h2 class="hmm-title" data-animate="slide-up">HMMMM</h2>
+          <p class="hmm-subtitle" data-animate="slide-up" data-delay="150">Saboroso em cada detalhe</p>
+        </header>
+
+        <div class="hmm-content">
+          <img
+            src="public/images/hmm-chicken-nuggets.png"
+            alt="Crispy Chicken Nuggets - Nuggets crocantes de frango"
+            class="hmm-image"
+            data-animate="fade-elastic"
+            data-delay="100"
+          />
+
+          <div class="hmm-text-block" data-animate="slide-right-to-left" data-delay="250">
+            <h3 class="hmm-product-title">Crispy Chicken Nuggets</h3>
+            <p class="hmm-description">
+              Crocantes por fora, suculentos por dentro. Nossos nuggets são
+              feitos com peito de frango selecionado e temperados com nossa
+              receita especial.
+            </p>
+
+            <div class="hmm-badges">
+              <div class="hmm-badge">
+                <img
+                  src="public/images/hmm-pimenta.png"
+                  class="hmm-badge-icon"
+                />
+                <div class="hmm-badge-content">
+                  <span class="hmm-badge-label">Tempero Especial</span>
+                  <span class="hmm-badge-sublabel">Nossa receita secreta</span>
+                </div>
+              </div>
+
+              <div class="hmm-badge">
+                <img src="public/images/hmm-fogo.png" class="hmm-badge-icon" />
+                <div class="hmm-badge-content">
+                  <span class="hmm-badge-label">Crocante Perfeito</span>
+                  <span class="hmm-badge-sublabel">Feito na hora</span>
+                </div>
+              </div>
+
+              <div class="hmm-badge">
+                <img
+                  src="public/images/hmm-estrela.png"
+                  class="hmm-badge-icon"
+                />
+                <div class="hmm-badge-content">
+                  <span class="hmm-badge-label">100% Frango</span>
+                  <span class="hmm-badge-sublabel">Frango fresco e puro</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   
+
+    <!-- ============================================
+         NINJA CAROUSEL SECTION — Kids Menu Carousel
+         ============================================ -->
+    <section class="ninja-carousel" id="kids">
+      <div class="ninja-carousel-container">
+        <!-- Left Column — Text Content -->
+        <div class="ninja-carousel-text">
+          <!-- Badge -->
+          <div class="ninja-carousel-badge">KIDS MENU</div>
+
+          <!-- Title -->
+          <h2 class="ninja-carousel-title">
+            O PODER NINJA<br />
+            CHEGOU AO BK!
+          </h2>
+
+          <!-- Description -->
+          <p class="ninja-carousel-description">
+            Peça seu King Jr. e colecione os brinquedos das<br />
+            Tartarugas Ninja!
+          </p>
+
+          <!-- CTA Button -->
+          <button class="ninja-carousel-cta">Quero Meu King Jr.</button>
+        </div>
+
+        <!-- Right Column — Images -->
+        <div class="ninja-carousel-images">
+          <img
+            src="public/images/samurai.png"
+            alt="Brinquedo Tartaruga Ninja Leonardo"
+            class="ninja-carousel-image active"
+            data-slide="1"
+          />
+          <img
+            src="public/images/tartarugas.png"
+            alt="Brinquedo Tartaruga Ninja Donatello"
+            class="ninja-carousel-image"
+            data-slide="2"
+          />
+           
+        </div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <button
+        class="ninja-carousel-nav ninja-carousel-nav-prev"
+        aria-label="Slide anterior"
+      >
+        ‹
+      </button>
+      <button
+        class="ninja-carousel-nav ninja-carousel-nav-next"
+        aria-label="Próximo slide"
+      >
+        ›
+      </button>
+
+      <!-- Bottom Overlay -->
+      <div class="ninja-carousel-overlay"></div>
+    </section>
+
+    <!-- ============================================
+           MENU SECTION — Seção de Cardápio Interativo
+           ============================================ -->
+  <!--    <section class="menu-section" id="menu">
+        <div class="menu-container">  -->
+          <!-- Cabeçalho da seção -->
+      <!--    <header class="menu-header">
+            <h2 class="menu-title">NOSSO MENU</h2>
+            <p class="menu-subtitle">Explore nossos deliciosos produtos</p>
+          </header>  -->
+
+          <!-- Filtros de categoria -->
+       <!--   <div class="menu-filters">
+            <button class="filter-btn active" data-filter="todos">TODOS</button>
+            <button class="filter-btn" data-filter="burgers">BURGERS</button>
+            <button class="filter-btn" data-filter="bebidas">BEBIDAS</button>
+            <button class="filter-btn" data-filter="acompanhamentos">ACOMPANHAMENTOS</button>
+          </div>  -->
+
+          <!-- Grade de cards -->
+       <!--   <div class="menu-grid">  -->
+            <!-- Linha 1 -->
+         <!--   <div class="menu-card white">
+              <h3 class="menu-card-title">King Bacon</h3>
+            </div>
+
+            <div class="menu-card red">
+              <h3 class="menu-card-title">King Duplo</h3>
+              <p class="menu-card-description">Dois hambúrgueres, queijo, alface, tomate e molho especial</p>
+              <div class="menu-card-price">R$ 32,90</div>
+            </div>
+
+            <div class="menu-card red">
+              <h3 class="menu-card-title">Refrigerante</h3>
+              <p class="menu-card-description">Coca-Cola, Pepsi ou Guaraná gelado</p>
+              <div class="menu-card-price">R$ 8,90</div>
+            </div>  -->
+
+            <!-- Linha 2 -->
+         <!--   <div class="menu-card red">
+              <h3 class="menu-card-title">Bacon</h3>
+              <p class="menu-card-description">Bacon crocante e saboroso</p>
+              <div class="menu-card-price">R$ 14,90</div>
+            </div>
+
+            <div class="menu-card red">
+              <h3 class="menu-card-title">King Chicken</h3>
+              <p class="menu-card-description">Frango crocante com molho especial e alface</p>
+              <div class="menu-card-price">R$ 22,90</div>
+            </div>
+
+            <div class="menu-card white">
+              <img src="public/images/bacon-plate.png" alt="Prato de bacon crocante" class="menu-card-image" />
+              <h3 class="menu-card-title">Bacon</h3>
+            </div>
+          </div>
+        </div>
+      </section>  -->
+
+
+      <!-- ============================================
+         Menu Flip Section
+         ============================================ -->
+    <section class="menu-flip-section" id="menu" data-animate="fade-in">
+      <div class="menu-flip-container">
+        <header class="menu-flip-header">
+          <h2 class="menu-flip-title" data-animate="slide-up">NOSSO MENU</h2>
+          <p class="menu-flip-subtitle" data-animate="slide-up" data-delay="150">Explore nossos deliciosos produtos</p>
+        </header>
+
+        <div class="menu-flip-filters">
+          <button class="filter-btn active" data-filter="todos" data-animate="slide-left-to-right" data-delay="250">TODOS</button>
+          <button class="filter-btn" data-filter="burgers" data-animate="slide-left-to-right" data-delay="350">BURGERS</button>
+          <button class="filter-btn" data-filter="bebidas" data-animate="slide-left-to-right" data-delay="450">BEBIDAS</button>
+          <button class="filter-btn" data-filter="acompanhamentos" data-animate="slide-left-to-right" data-delay="550">ACOMPANHAMENTOS</button>
+        </div>
+
+        <div class="menu-flip-grid" data-animate="fade-in" data-delay="250">
+          <!-- Card 1: King Bacon -->
+          <div class="menu-card" data-animate="slide-up" data-delay="700" data-category="burgers">
+            <div class="menu-card-inner">
+              <div class="menu-card-front">
+                <div class="menu-card-image">
+                  <!-- Imagem placeholder -->
+                  <img src="public/images/menu-king-bacon.png" alt="King Bacon" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-lg);" onerror="this.style.display='none';" />
+                </div>
+                <h3 class="menu-card-name">King Bacon</h3>
+              </div>
+              <div class="menu-card-back">
+                <h3 class="menu-card-back-name">King Bacon</h3>
+                <p class="menu-card-description">Blend especial de carne, bacon crocante, queijo cheddar e molho defumado</p>
+                <div class="menu-card-price">R$ 29,90</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: King Duplo -->
+          <div class="menu-card flipped" data-animate="slide-up" data-delay="800" data-category="burgers">
+            <div class="menu-card-inner">
+              <div class="menu-card-front">
+                <div class="menu-card-image">
+                  <img src="public/images/menu-king-duplo.png" alt="King Duplo" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-lg);" onerror="this.style.display='none';" />
+                </div>
+                <h3 class="menu-card-name">King Duplo</h3>
+              </div>
+              <div class="menu-card-back">
+                <h3 class="menu-card-back-name">King Duplo</h3>
+                <p class="menu-card-description">Dois hambúrgueres, queijo, alface, tomate e molho especial</p>
+                <div class="menu-card-price">R$ 32,90</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Refrigerante -->
+          <div class="menu-card flipped" data-animate="slide-up" data-delay="900" data-category="bebidas">
+            <div class="menu-card-inner">
+              <div class="menu-card-front">
+                <div class="menu-card-image">
+                  <img src="public/images/menu-refrigerante.png" alt="Refrigerante" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-lg);" onerror="this.style.display='none';" />
+                </div>
+                <h3 class="menu-card-name">Refrigerante</h3>
+              </div>
+              <div class="menu-card-back">
+                <h3 class="menu-card-back-name">Refrigerante</h3>
+                <p class="menu-card-description">Coca-Cola, Pepsi ou Guaraná gelado</p>
+                <div class="menu-card-price">R$ 8,90</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Batata Frita -->
+          <div class="menu-card flipped" data-animate="slide-up" data-delay="1000" data-category="acompanhamentos">
+            <div class="menu-card-inner">
+              <div class="menu-card-front">
+                <div class="menu-card-image">
+                  <img src="public/images/menu-batata-frita.png" alt="Bacon" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-lg);" onerror="this.style.display='none';" />
+                </div>
+                <h3 class="menu-card-name">Batata Frita</h3>
+              </div>
+              <div class="menu-card-back">
+                <h3 class="menu-card-back-name">Batata Frita</h3>
+                <p class="menu-card-description">Batata frita crocante e saborosa</p>
+                <div class="menu-card-price">R$ 12,90</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: King Chicken -->
+          <div class="menu-card flipped" data-animate="slide-up" data-delay="1100" data-category="burgers">
+            <div class="menu-card-inner">
+              <div class="menu-card-front">
+                <div class="menu-card-image">
+                  <img src="public/images/menu-king-chicken.png" alt="King Chicken" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-lg);" onerror="this.style.display='none';" />
+                </div>
+                <h3 class="menu-card-name">King Chicken</h3>
+              </div>
+              <div class="menu-card-back">
+                <h3 class="menu-card-back-name">King Chicken</h3>
+                <p class="menu-card-description">Frango crocante com molho especial e alface</p>
+                <div class="menu-card-price">R$ 22,90</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6: Bacon com foto -->
+          <div class="menu-card" data-animate="slide-up" data-delay="1200" data-category="acompanhamentos">
+            <div class="menu-card-inner">
+              <div class="menu-card-front">
+                <div class="menu-card-image">
+                  <img src="public/images/menu-bacon.png" alt="Bacon" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-lg);" onerror="this.style.display='none';" />
+                </div>
+                <h3 class="menu-card-name">Bacon</h3>
+              </div>
+              <div class="menu-card-back">
+                <h3 class="menu-card-back-name">Bacon</h3>
+                <p class="menu-card-description">Bacon crocante e saboroso</p>
+                <div class="menu-card-price">R$ 14,90</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+      <!-- ============================================
+           APP BANNER KING SECTION
+           ============================================ -->
+      <section class="app-banner-king" id="app" data-animate="fade-in" aria-labelledby="app-banner-king-title">
+        <div class="app-banner-king-container">
+
+          <!-- Phone Mockup -->
+          <div class="app-phone-mockup">
+            <div class="app-phone-shell">
+              <div class="app-phone-screen">
+                <!-- Top Bar -->
+                <div class="app-screen-topbar">
+                  <img src="public/images/clube-kb-icon.svg" alt="" class="app-screen-icon">
+                  <span class="app-screen-title">Clube KB</span>
+                </div>
+
+                <!-- Hero Area -->
+                <div class="app-screen-hero">
+                  <div class="app-screen-preview">
+                    <img src="public/images/app-preview.png" alt="Preview do aplicativo King Burger">
+                  </div>
+                  <div class="app-screen-summary" aria-hidden="true"></div>
+                </div>
+
+                <!-- Actions -->
+                <div class="app-screen-actions">
+                  <div class="app-screen-action">
+                    <img src="public/images/icon1.svg" alt="">
+                  </div>
+                  <div class="app-screen-action">
+                    <img src="public/images/icon2.svg" alt="">
+                  </div>
+                  <div class="app-screen-action">
+                    <img src="public/images/icon3.svg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="app-content">
+            <h2 class="app-content-title" id="app-banner-king-title">
+              Baixe nosso<br>
+              App e tenha o<br>
+              King Burger na<br>
+              palma da sua<br>
+              mão!
+            </h2>
+
+            <div class="app-download-links">
+
+
+
+              <div>
+
+              <!-- App Store -->
+              <a href="https://apps.apple.com/br/app/burger-king-brasil/id1295116265" class="app-store-link">
+                <img src="public/images/app-store-icon.svg" alt="App Store" class="app-store-icon">
+                <div class="app-store-text">
+                  <span class="app-store-label">Disponível na</span>
+                  <span class="app-store-name">App Store</span>
+                </div>
+              </a>
+
+              
+
+                <!-- Google Play -->
+              <a class="google-play-link" href="https://play.google.com/store/apps/details?id=burgerking.com.br.appandroid&hl=pt_BR" aria-label="Get it on Google Play">
+                <svg class="gp-icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#00C6FF"/>
+                      <stop offset="100%" stop-color="#0072FF"/>
+                    </linearGradient>
+                    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#FFD000"/>
+                      <stop offset="100%" stop-color="#FF6D00"/>
+                    </linearGradient>
+                    <linearGradient id="g3" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stop-color="#00E676"/>
+                      <stop offset="100%" stop-color="#00796B"/>
+                    </linearGradient>
+                    <linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#FF5252"/>
+                      <stop offset="100%" stop-color="#D50000"/>
+                    </linearGradient>
+                  </defs>
+                  <path d="M32 32 L32 480 L270 256 Z" fill="url(#g1)"/>
+                  <path d="M270 256 L32 32 L430 200 Z" fill="url(#g2)"/>
+                  <path d="M270 256 L32 480 L430 312 Z" fill="url(#g3)"/>
+                  <path d="M270 256 L430 200 L490 256 L430 312 Z" fill="url(#g4)"/>
+                </svg>
+                <div class="gp-text">
+                  <span class="gp-small">Disponível no</span>
+                  <span class="gp-big">Google Play</span>
+                </div>
+              </a>
+
+
+
+           
+
+             
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ============================================
+           FOOTER — Minimalist App Footer
+           ============================================ -->
+      <footer class="footer" data-animate="fade-in" role="contentinfo">
+        <div class="footer-container">
+          <!-- Logo -->
+          <div class="footer-logo">
+            <svg class="footer-logo-icon" width="14" height="17" viewBox="0 0 25 29" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M7.19804 24.5694V15.3559C6.34214 15.1209 5.62469 14.651 5.0457 13.9462C4.46671 13.2413 4.17721 12.419 4.17721 11.4792V4.43055H6.1911V11.4792H7.19804V4.43055H9.21193V11.4792H10.2189V4.43055H12.2328V11.4792C12.2328 12.419 11.9433 13.2413 11.3643 13.9462C10.7853 14.651 10.0678 15.1209 9.21193 15.3559V24.5694H7.19804ZM17.2675 24.5694V16.5139H14.2467V9.46527C14.2467 8.07233 14.7375 6.88498 15.7193 5.90321C16.7011 4.92144 17.8884 4.43055 19.2814 4.43055V24.5694H17.2675Z" fill="#CC2200"/>
+            </svg>
+            <span class="footer-logo-text">KING BURGER</span>
+          </div>
+
+          <!-- App Name -->
+          <div class="footer-app-name">APP KB</div>
+
+          <!-- Action Icons -->
+          <div class="footer-icons">
+            <button class="footer-icon" aria-label="Download">
+              <svg width="14" height="17" viewBox="0 0 48 58" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M24.005 33.2958C25.24 33.2958 26.2897 32.8635 27.1542 31.9991C28.0187 31.1346 28.4509 30.0848 28.4509 28.8498C28.4509 27.6149 28.0187 26.5651 27.1542 25.7006C26.2897 24.8361 25.24 24.4039 24.005 24.4039C22.77 24.4039 21.7203 24.8361 20.8558 25.7006C19.9913 26.5651 19.559 27.6149 19.559 28.8498C19.559 30.0848 19.9913 31.1346 20.8558 31.9991C21.7203 32.8635 22.77 33.2958 24.005 33.2958ZM24.005 31.3198C23.3134 31.3198 22.7288 31.081 22.2513 30.6035C21.7738 30.126 21.535 29.5414 21.535 28.8498C21.535 28.1582 21.7738 27.5737 22.2513 27.0962C22.7288 26.6186 23.3134 26.3799 24.005 26.3799C24.6966 26.3799 25.2811 26.6186 25.7587 27.0962C26.2362 27.5737 26.475 28.1582 26.475 28.8498C26.475 29.5414 26.2362 30.126 25.7587 30.6035C25.2811 31.081 24.6966 31.3198 24.005 31.3198ZM16.1011 36.7537C15.5577 36.7537 15.0925 36.5603 14.7056 36.1733C14.3186 35.7863 14.1251 35.3212 14.1251 34.7778V22.9219C14.1251 22.3785 14.3186 21.9133 14.7056 21.5264C15.0925 21.1394 15.5577 20.9459 16.1011 20.9459H19.2133L21.041 18.97H26.969L28.7967 20.9459H31.9089C32.4523 20.9459 32.9175 21.1394 33.3044 21.5264C33.6914 21.9133 33.8849 22.3785 33.8849 22.9219V34.7778C33.8849 35.3212 33.6914 35.7863 33.3044 36.1733C32.9175 36.5603 32.4523 36.7537 31.9089 36.7537H16.1011ZM16.1011 34.7778H31.9089V22.9219H27.9076L26.1045 20.9459H21.9055L20.1024 22.9219H16.1011V34.7778Z" fill="#FFFFFF"/>
+              </svg>
+            </button>
+            <button class="footer-icon" aria-label="Compartilhar">
+              <svg width="14" height="17" viewBox="0 0 48 58" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M28.942 37.7398C28.1183 37.7398 27.4182 37.4515 26.8416 36.8749C26.2651 36.2984 25.9768 35.5983 25.9768 34.7746C25.9768 34.6758 26.0015 34.4451 26.0509 34.0827L19.1074 30.0303C18.8438 30.2774 18.5391 30.4709 18.1931 30.611C17.8472 30.751 17.4766 30.821 17.0812 30.821C16.2575 30.821 15.5574 30.5327 14.9808 29.9561C14.4043 29.3796 14.116 28.6795 14.116 27.8558C14.116 27.0321 14.4043 26.332 14.9808 25.7554C15.5574 25.1789 16.2575 24.8906 17.0812 24.8906C17.4766 24.8906 17.8472 24.9606 18.1931 25.1006C18.5391 25.2406 18.8438 25.4342 19.1074 25.6813L26.0509 21.6289C26.018 21.5136 25.9974 21.4024 25.9892 21.2953C25.9809 21.1882 25.9768 21.0688 25.9768 20.937C25.9768 20.1133 26.2651 19.4132 26.8416 18.8366C27.4182 18.2601 28.1183 17.9718 28.942 17.9718C29.7657 17.9718 30.4658 18.2601 31.0423 18.8366C31.6189 19.4132 31.9072 20.1133 31.9072 20.937C31.9072 21.7607 31.6189 22.4608 31.0423 23.0373C30.4658 23.6139 29.7657 23.9022 28.942 23.9022C28.5466 23.9022 28.176 23.8322 27.83 23.6922C27.4841 23.5521 27.1793 23.3586 26.9158 23.1115L19.9723 27.1639C20.0052 27.2792 20.0258 27.3904 20.034 27.4975C20.0423 27.6046 20.0464 27.724 20.0464 27.8558C20.0464 27.9876 20.0423 28.107 20.034 28.2141C20.0258 28.3212 20.0052 28.4324 19.9723 28.5477L26.9158 32.6001C27.1793 32.353 27.4841 32.1594 27.83 32.0194C28.176 31.8794 28.5466 31.8094 28.942 31.8094C29.7657 31.8094 30.4658 32.0977 31.0423 32.6742C31.6189 33.2508 31.9072 33.9509 31.9072 34.7746C31.9072 35.5983 31.6189 36.2984 31.0423 36.8749C30.4658 37.4515 29.7657 37.7398 28.942 37.7398ZM28.942 35.763C29.222 35.763 29.4568 35.6683 29.6462 35.4788C29.8357 35.2894 29.9304 35.0546 29.9304 34.7746C29.9304 34.4945 29.8357 34.2598 29.6462 34.0704C29.4568 33.8809 29.222 33.7862 28.942 33.7862C28.6619 33.7862 28.4272 33.8809 28.2378 34.0704C28.0483 34.2598 27.9536 34.4945 27.9536 34.7746C27.9536 35.0546 28.0483 35.2894 28.2378 35.4788C28.4272 35.6683 28.6619 35.763 28.942 35.763ZM17.0812 28.8442C17.3612 28.8442 17.596 28.7495 17.7854 28.56C17.9749 28.3706 18.0696 28.1358 18.0696 27.8558C18.0696 27.5757 17.9749 27.341 17.7854 27.1516C17.596 26.9621 17.3612 26.8674 17.0812 26.8674C16.8011 26.8674 16.5664 26.9621 16.377 27.1516C16.1875 27.341 16.0928 27.5757 16.0928 27.8558C16.0928 28.1358 16.1875 28.3706 16.377 28.56C16.5664 28.7495 16.8011 28.8442 17.0812 28.8442ZM28.942 21.9254C28.942 21.9254 29.012 21.9254 29.152 21.9254C29.2921 21.9254 29.4568 21.8307 29.6462 21.6412C29.8357 21.4518 29.9304 21.217 29.9304 20.937C29.9304 20.6569 29.8357 20.4222 29.6462 20.2328C29.4568 20.0433 29.222 19.9486 28.942 19.9486C28.6619 19.9486 28.4272 20.0433 28.2378 20.2328C28.0483 20.4222 27.9536 20.6569 27.9536 20.937C27.9536 21.217 28.0483 21.4518 28.2378 21.6412C28.4272 21.8307 28.6619 21.9254 28.942 21.9254Z" fill="#FFFFFF"/>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Legal Text -->
+          <p class="footer-legal">
+            Sujeito à disponibilidade em estoque. Imagens meramente ilustrativas. TM & © 2024 King Burger Company LLC. Usuário sob licença. Todos os direitos reservados.
+          </p>
+        </div>
+      </footer>
+
+    
+    <script src="js/main.js"></script>
+    <script src="js/ingrdiente-teste.js"></script>
+    
+  </body>
+</html>

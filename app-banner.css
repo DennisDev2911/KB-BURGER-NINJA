@@ -1,0 +1,304 @@
+/* App Banner Section */
+.app-banner {
+  background: #3d1a0e;
+  padding: clamp(2.25rem, 3.5vw, 4rem) 1.5rem;
+  overflow: hidden;
+}
+
+.app-banner-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) minmax(320px, 1fr);
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.app-banner-visual {
+  display: grid;
+  place-items: center;
+}
+
+.app-phone-shell {
+  position: relative;
+  width: min(100%, 320px);
+}
+
+.app-phone-shadow {
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 12px;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.12),
+    transparent 55%
+  );
+  transform: translateY(48px);
+  filter: blur(20px);
+}
+
+.app-phone {
+  position: relative;
+  background: linear-gradient(180deg, #21130f 0%, #361d17 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 42px;
+  padding: 24px 20px 18px;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.45);
+}
+
+.app-phone-camera {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  width: 64px;
+  height: 6px;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.app-phone-screen {
+  position: relative;
+  background: #f5efe0;
+  border-radius: 34px;
+  min-height: 460px;
+  display: grid;
+  gap: 1.4rem;
+  padding: 1.3rem;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.03);
+}
+
+.app-screen-topbar {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #3d1a0e;
+  font-weight: 700;
+  font-size: 0.95rem;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.04);
+}
+
+.app-screen-badge {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: #b83c24;
+  box-shadow: 0 0 0 7px rgba(184, 60, 36, 0.14);
+}
+
+.app-screen-hero {
+  display: grid;
+  place-items: center;
+  padding: 0 0.5rem;
+}
+
+.app-screen-card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 32px;
+  overflow: hidden;
+  background: radial-gradient(
+    circle at top left,
+    #fff1e2 0%,
+    #f3e0ca 42%,
+    #e8d2b7 100%
+  );
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.1);
+}
+
+.app-screen-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.72),
+    transparent 60%
+  );
+}
+
+.app-screen-card-graphic {
+  position: absolute;
+  inset: 18% 10% auto 10%;
+  height: 54%;
+  border-radius: 2rem;
+  background: linear-gradient(180deg, #f7f1e6 0%, #d6bea5 100%);
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.55),
+    0 16px 30px rgba(0, 0, 0, 0.08);
+}
+
+.app-screen-card-circle {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  bottom: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: radial-gradient(circle at top left, #fef3de, #d7b998);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.app-screen-actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.9rem;
+  margin-top: auto;
+}
+
+.app-icon-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 18px;
+  border: none;
+  background: #f6efe4;
+  color: #3d1a0e;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 250ms ease,
+    box-shadow 250ms ease;
+  cursor: pointer;
+}
+
+.app-icon-btn:hover,
+.app-icon-btn:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.12);
+}
+
+.app-icon-btn svg {
+  width: 22px;
+  height: 22px;
+}
+
+.app-banner-copy {
+  color: #fff;
+}
+
+.app-banner-title {
+  font-family: "Titan One", "Open Sans", sans-serif;
+  font-size: clamp(4.5rem, 5vw, 3.4rem);
+  line-height: 1.02;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin: 0 0 1.6rem;
+  width: 578.51px;
+}
+
+.download-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.app-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.95rem 1.2rem;
+  border-radius: 1.4rem;
+  text-decoration: none;
+  color: #fff;
+  background: #111111;
+  min-width: 220px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22);
+}
+
+.app-badge-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+}
+
+.app-badge-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.app-badge-text {
+  display: grid;
+  gap: 0.08rem;
+  text-align: left;
+}
+
+.app-badge-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  opacity: 0.75;
+  letter-spacing: 0.08em;
+}
+
+.app-badge-name {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.app-badge-store .app-badge-icon {
+  background: transparent;
+  border-radius: 12px;
+  color: #fff;
+}
+
+.app-badge-play .app-badge-icon {
+  background: #ffffff;
+  border-radius: 14px;
+}
+
+.app-badge-play .app-badge-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.app-badge-play .app-badge-label {
+  opacity: 0.85;
+}
+
+@media (max-width: 920px) {
+  .app-banner-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .app-banner-copy {
+    text-align: center;
+  }
+
+  .download-buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .app-banner {
+    padding: 2rem 1rem;
+  }
+
+  .app-banner-title {
+    font-size: clamp(1.9rem, 5vw, 2.7rem);
+  }
+
+  .app-phone {
+    padding: 18px 16px 14px;
+  }
+
+  .app-screen-actions {
+    gap: 0.75rem;
+  }
+
+  .app-badge {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,388 @@
+/* ============================================
+   KINGS BACON SECTION
+   ============================================ */
+
+:root {
+  --color-beige: #f5ebdc;
+  --color-black: #1a120b;
+  --color-gold: #c99400;
+  --color-red: #d62300;
+  --color-dark-bg: #000000;
+  --color-marrom: #3d1203;
+}
+
+/* ============================================
+   ANIMATIONS — KINGS BACON
+   ============================================ */
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-left-to-right {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-right-to-left {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-bounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.03);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.kings-bacon {
+  background-color: var(--color-beige);
+  border: none;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+/* ============================================
+   ANIMATION STATES — KINGS BACON
+   ============================================ */
+
+.kings-bacon-title {
+  opacity: 0;
+  transform: translateY(40px);
+  will-change: transform, opacity;
+}
+
+.kings-bacon-title.is-visible {
+  animation: slide-up 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.kings-bacon-subtitle {
+  opacity: 0;
+  transform: translateY(40px);
+  will-change: transform, opacity;
+}
+
+.kings-bacon-subtitle.is-visible {
+  animation: slide-up 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.kings-bacon-card-1:nth-child(1) {
+  opacity: 0;
+  transform: translateX(60px);
+  will-change: transform, opacity;
+}
+
+.kings-bacon-card-1:nth-child(1).is-visible {
+  animation: slide-right-to-left 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.kings-bacon-card-central {
+  opacity: 0;
+  transform: scale(0.96);
+  will-change: transform, opacity;
+}
+
+.kings-bacon-card-central.is-visible {
+  animation: fade-bounce 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.kings-bacon-card-1:nth-child(3) {
+  opacity: 0;
+  transform: translateX(-60px);
+  will-change: transform, opacity;
+}
+
+.kings-bacon-card-1:nth-child(3).is-visible {
+  animation: slide-left-to-right 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.kings-bacon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 720px;
+}
+
+.kings-bacon-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  width: 655.11px;
+  margin-top: 80px;
+}
+
+.kings-bacon-title {
+  font-family: "Titan One", cursive;
+  font-size: 120px;
+  font-weight: 400;
+  color: var(--color-marrom);
+  margin: 0;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.kings-bacon-subtitle {
+  font-family: "Titan One", cursive;
+  font-size: 57px;
+  font-weight: 400;
+  color: var(--color-gold);
+  margin: 0;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.kings-bacon-grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1.5rem;
+  width: 863.4px;
+}
+
+.kings-bacon-card-1,
+.kings-bacon-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+  transition:
+    transform 250ms ease,
+    filter 250ms ease;
+  will-change: transform, opacity;
+  cursor: pointer;
+}
+
+.kings-bacon-card-1:hover,
+.kings-bacon-card:hover {
+  transform: translateY(-4px) scale(1.03);
+}
+
+.kings-bacon-card-image {
+  transition: transform 250ms ease;
+}
+
+.kings-bacon-card-1:hover .kings-bacon-card-image,
+.kings-bacon-card:hover .kings-bacon-card-image {
+  transform: scale(1.06);
+}
+
+.kings-bacon-card-title {
+  font-family: "Titan One", cursive;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--color-marrom);
+  text-transform: uppercase;
+  margin: 0 0 0.5rem 0;
+  text-align: center;
+}
+
+.kings-bacon-card-image {
+  width: 256px;
+  height: 256px;
+  object-fit: cover;
+  background-color: var(--color-dark-bg);
+  border-radius: 8px;
+}
+
+.kings-bacon-card-central .kings-bacon-card-image {
+  width: 340px;
+  height: 340px;
+  margin-bottom: -1.5rem;
+}
+
+.kings-bacon-card-central .kings-bacon-card-title {
+  margin-bottom: 0.5rem;
+}
+
+/* ============================================
+   MOBILE RESPONSIVE
+   ============================================ */
+
+@media (max-width: 1023px) {
+  .kings-bacon {
+    padding: 1rem;
+    border-width: 1px;
+  }
+
+  .kings-bacon-title {
+    font-size: 48px;
+  }
+
+  .kings-bacon-subtitle {
+    font-size: 32px;
+  }
+
+  .kings-bacon-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .kings-bacon-grid {
+    gap: 0.75rem;
+  }
+
+  .kings-bacon-card-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .kings-bacon-card-central .kings-bacon-card-image {
+    width: 260px;
+    height: 260px;
+  }
+
+  .kings-bacon-card-title {
+    font-size: 16px;
+    margin-bottom: 0.5rem;
+  }
+
+  .kings-bacon-card-central .kings-bacon-card-title {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .kings-bacon-grid {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 0 1rem;
+  }
+
+  .kings-bacon-card-image {
+    width: 180px;
+    height: 180px;
+  }
+
+  .kings-bacon-card-central .kings-bacon-card-image {
+    width: 240px;
+    height: 240px;
+  }
+}
+
+/* ============================================
+   MOBILE FRAME — coluna unica fluida
+   ============================================ */
+
+@media (max-width: 1023px) {
+  .kings-bacon {
+    width: min(100%, 480px);
+    min-height: 100vh;
+    padding: clamp(1rem, 4vw, 2rem);
+   /* border: 1px solid var(--color-red); */
+  }
+
+  .kings-bacon-container {
+    height: auto;
+    gap: clamp(1.5rem, 5vw, 2.25rem);
+  }
+
+  .kings-bacon-header {
+    width: 100%;
+    margin: 0;
+    margin-top: 80px;
+  }
+
+  .kings-bacon-title {
+    font-size: clamp(5rem, 12vw, 4rem);
+    line-height: 1;
+  }
+
+  .kings-bacon-subtitle {
+    font-size: clamp(2.6rem, 7.5vw, 2.5rem);
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+
+  .kings-bacon-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: clamp(1.5rem, 5vw, 2.25rem);
+    padding: 0;
+    overflow: visible;
+  }
+
+  .kings-bacon-card-1,
+  .kings-bacon-card,
+  .kings-bacon-card-central {
+    width: 100%;
+    margin: 0;
+  }
+
+  .kings-bacon-card-central {
+    margin-bottom: 20px;
+    margin-top: -80px;
+  }
+
+  .kings-bacon-card-1 {
+    margin-bottom: 80px;
+  }
+
+  
+
+  .kings-bacon-card-title {
+    max-width: 100%;
+    font-size: clamp(1.1rem, 2vw, 0.8rem);
+    line-height: 1.2;
+  }
+
+  .kings-bacon-card-image,
+  .kings-bacon-card-central .kings-bacon-card-image {
+    width: min(100%, 18rem);
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+
+  .kings-bacon-card-central .kings-bacon-card-image {
+    width: min(100%, 22rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kings-bacon-title,
+  .kings-bacon-subtitle,
+  .kings-bacon-card-1,
+  .kings-bacon-card-central {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}

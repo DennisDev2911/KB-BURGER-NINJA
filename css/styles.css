@@ -1,0 +1,14 @@
+/* ============================================
+   STYLES — Arquivo Central
+   Importa todos os arquivos CSS do projeto
+   em ordem de especificidade
+   ============================================ */
+
+/* 1. Design Tokens (variáveis globais) */
+@import url("tokens.css");
+
+/* 2. Reset & Base Styles */
+@import url("reset.css");
+
+/* 3. Componentes */
+@import url("menu.css");

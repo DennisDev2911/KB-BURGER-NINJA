@@ -1,0 +1,248 @@
+/* ============================================
+  NINJA CAROUSEL — Base styles
+  ============================================ */
+
+.ninja-carousel {
+  position: relative;
+  width: 100%;
+  min-height: 1020px;
+  background: linear-gradient(152deg, #00a859 0%, #004d2c 100%);
+  overflow: hidden;
+}
+
+.ninja-carousel-container {
+  max-width: 1279.99px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  min-height: 850px;
+  position: relative;
+}
+
+/* Left Column — Text Content */
+.ninja-carousel-text {
+  flex: 0 0 45%;
+  padding-right: 40px;
+}
+
+/* Badge */
+.ninja-carousel-badge {
+  display: inline-block;
+  background-color: #ffd100;
+  color: #502314;
+  font-family: "Titan One", cursive;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 10px 23px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Title */
+.ninja-carousel-title {
+  font-family: "Titan One", cursive;
+  font-size: 72px;
+  width: 562px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #ffffff;
+  line-height: 1em;
+  margin-bottom: 30px;
+}
+
+/* Description */
+.ninja-carousel-description {
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.333em;
+  margin-bottom: 40px;
+}
+
+/* CTA Button */
+.ninja-carousel-cta {
+  background-color: #ffffff;
+  color: #004d2c;
+  font-family: "Titan One", cursive;
+  font-size: 20px;
+  font-weight: 400;
+  border: none;
+  border-radius: 9999px;
+  padding: 18px 40px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.ninja-carousel-cta:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+}
+
+/* Right Column — Images */
+.ninja-carousel-images {
+  flex: 0 0 55%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ninja-carousel-image {
+  width: 615.99px;
+
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.08);
+  transition: opacity 0.5s ease;
+}
+
+.ninja-carousel-image:not(.active) {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ninja-carousel-image.active {
+  opacity: 1;
+  position: relative;
+}
+
+/* Navigation Buttons */
+.ninja-carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 56px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: none;
+  border-radius: 50%;
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  z-index: 10;
+}
+
+.ninja-carousel-nav:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.ninja-carousel-nav-prev {
+  left: 20px;
+}
+
+.ninja-carousel-nav-next {
+  right: 20px;
+}
+
+/* Overlay */
+.ninja-carousel-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 34px;
+  background-color: rgba(80, 35, 20, 0.9);
+}
+
+/* ============================================
+  Responsive styles — Tablet and smaller
+  ============================================ */
+@media (max-width: 1024px) {
+  .ninja-carousel-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .ninja-carousel-text {
+    flex: none;
+    padding-right: 0;
+    margin-bottom: 40px;
+    font-size: 19px;
+  }
+
+  .ninja-carousel-title {
+    font-size: 48px;
+  }
+
+  .ninja-carousel-description {
+    font-size: 20px;
+  }
+
+  .ninja-carousel-images {
+    flex: none;
+    margin: 270px 0 0 -1px;
+  }
+
+  .ninja-carousel-image {
+    width: 380px;
+    height: 380px;
+  }
+
+  .ninja-carousel-nav {
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+  }
+
+  .ninja-carousel-nav-prev {
+    left: 10px;
+    margin-top: 22px;
+  }
+
+  .ninja-carousel-nav-next {
+    right: 10px;
+    margin-top: 22px;
+  }
+}
+
+/* ============================================
+  Responsive styles — Mobile
+  ============================================ */
+@media (max-width: 640px) {
+  .ninja-carousel-title {
+    font-size: 50px;
+    width: 100%;
+    margin: 22px auto 24px;
+    padding: 0;
+    display: block;
+  }
+
+  .ninja-carousel-description {
+    font-size: 18px;
+    width: 100%;
+    margin: 0 auto 30px 0;
+    padding: 0;
+  }
+
+  .ninja-carousel-image {
+    width: 380px;
+    height: 380px;
+    margin: -250px auto 30px auto;
+  }
+
+  .ninja-carousel-badge {
+    font-size: 22px;
+    padding: 8px 24px;
+    background-color: #ffd100;
+    color: #502314;
+    margin: 50px auto 20px 0;
+  }
+
+  .ninja-carousel-cta {
+    font-size: 22px;
+    padding: 18px 40px;
+    background-color: #ffffff;
+    color: #004d2c;
+    margin: 0 auto -10px 0;
+  }
+}

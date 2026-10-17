@@ -1,0 +1,81 @@
+/* ============================================
+   DESIGN TOKENS — Custom Properties
+   Variáveis globais para cores, tipografia,
+   espaçamento, animações e z-index
+   ============================================ */
+
+:root {
+  /* === Cores (extraídas do Figma) === */
+  --color-primary-yellow: #ffe60a;
+  --color-primary-red: #d62300;
+  --color-primary-dark: #3d1a0e;
+  --color-text-dark: #502314;
+  --color-bg-navbar: #f9f4ed;
+  --color-bg-white: #ffffff;
+  --color-bg-surface: #f0f0f0;
+  --color-text-light: #ffffff;
+  --color-border: rgba(0, 0, 0, 0.08);
+
+  /* Cores específicas do Ninja Hero */
+  --color-ninja-green: #00a859;
+  --color-ninja-green-dark: #004d2c;
+  --color-ninja-yellow: #fad60c;
+
+  /* === Tipografia === */
+  --font-display: "Titan One", cursive;
+  --font-body: "Open Sans", sans-serif;
+
+  /* Tamanhos fluidos */
+  --text-xs: clamp(0.7rem, 0.65rem + 0.25vw, 0.875rem);
+  --text-sm: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);
+  --text-base-2: clamp(0.7rem, 0.65rem + 0.25vw, 1.125rem);
+  --text-base: clamp(1.21rem, 0.95rem + 0.25vw, 1.125rem);
+  --text-lg: clamp(1.125rem, 1rem + 0.625vw, 1.5rem);
+  --text-3xl: clamp(2rem, 1.7rem + 1.5vw, 3rem);
+  --text-4xl: clamp(2.5rem, 2rem + 2.5vw, 4rem);
+  --text-5xl: clamp(3rem, 2.5rem + 2.5vw, 5rem);
+
+  /* Pesos */
+  --font-normal: 300;
+  --font-bold: 700;
+  --font-black: 900;
+
+  /* Line heights */
+  --leading-none: 1;
+  --leading-tight: 1.2;
+  --leading-normal: 1.3;
+  --leading-relaxed: 1.6;
+
+  /* === Espaçamento === */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.8rem;
+  --space-4: 0.9rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+
+  /* === Layout === */
+  --container-max: 1200px;
+
+  /* === Bordas === */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  /* === Sombras === */
+  --shadow-sm:
+    0 2px 4px -1px rgba(0, 0, 0, 0.03), 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.12);
+
+  /* === Transições === */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* === Z-index === */
+  --z-sticky: 50;
+  --z-overlay: 100;
+}

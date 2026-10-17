@@ -1,0 +1,200 @@
+/* ============================================
+   FOOTER — Minimalist App Footer
+   ============================================ */
+
+.footer {
+  width: 100%;
+  min-height: 414.55px;
+  background-color: #2b0c01;
+  border-top: none;
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 0;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo,
+.footer-app-name,
+.footer-icons {
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+.footer.is-visible .footer-logo {
+  animation: fade-in-up 0.75s ease-out 0.2s forwards;
+}
+
+.footer.is-visible .footer-app-name {
+  animation: fade-in-up 0.75s ease-out 0.45s forwards;
+}
+
+.footer.is-visible .footer-icons {
+  animation: fade-in-up 0.75s ease-out 0.7s forwards;
+}
+
+.footer-legal {
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+.footer.is-visible .footer-legal {
+  animation: fade-in-up-legal 0.75s ease-out 0.95s forwards;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.footer-logo-icon {
+  width: 41px;
+  height: 41px;
+  fill: #fd2e04;
+}
+
+.footer-logo-text {
+  font-family: "Titan One", cursive;
+  font-size: 29px;
+  font-weight: 300;
+  color: #f72d05;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-app-name {
+  font-family: "Open Sans", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 25px 0 44px 0;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.footer-icon {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.footer-icon:hover {
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+.footer-icon svg {
+  width: 129px;
+  height: 129px;
+  fill: #ffffff;
+}
+
+.footer-legal {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(245, 235, 220, 0.5);
+  text-align: center;
+  max-width: 640px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-up-legal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 0.9;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .footer {
+    min-height: 431px;
+    box-sizing: border-box;
+    padding: 32px 16px;
+   /* border: 1px solid #d62300; */
+  }
+
+  .footer-container {
+    width: 100%;
+  }
+
+  .footer-logo {
+    gap: 6px;
+    margin-bottom: 0;
+  }
+
+  .footer-logo-icon {
+    width: 38px;
+    height: 71px;
+    margin: 40px auto 0 auto;
+  }
+
+  .footer-logo-text {
+    font-size: 30px;
+    letter-spacing: 0;
+    margin: 40px auto 0 auto;
+  }
+
+  .footer-app-name {
+    margin: 50px 0 50px;
+    font-size: 13px;
+  }
+
+  .footer-icons {
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  .footer-icon {
+    width: 54px;
+    height: 54px;
+  }
+
+  .footer-icon svg {
+    width: 46px;
+    height: 46px;
+  }
+
+  .footer-legal {
+    max-width: 350px;
+    font-size: 12px;
+    line-height: 1.35;
+    margin: 20px auto;
+  }
+}
