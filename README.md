@@ -1,6 +1,16 @@
 # KB Burger Ninja
 
-Hambúrgueres artesanais feitos com paixão. Um projeto construído com **HTML5 semântico**, **CSS puro com Custom Properties** e **JavaScript vanilla ES6+**.
+Landing page promocional da KB Burger, construída com **HTML5**, **CSS** e **JavaScript vanilla**.
+
+## Problema que o projeto resolve
+
+O cliente precisa de um canal digital claro e atrativo para apresentar seus produtos e campanhas. Sem uma página centralizada, promoções, novidades, opções do menu e informações sobre o aplicativo ficam dispersas, dificultando que o público descubra o que a marca oferece e encontre o próximo passo.
+
+O projeto reúne esses conteúdos em uma única experiência responsiva: destaca o combo KB Ninja, organiza o acesso ao menu, às promoções e ao Kids Menu e apresenta o aplicativo da marca. Assim, a comunicação da campanha fica mais fácil de encontrar e de navegar em dispositivos móveis e desktop.
+
+## Prévia
+
+![Prévia da landing page KB Burger Ninja](./img/king%20burger%20ninja.JPG)
 
 ## 🚀 Stack
 
@@ -14,15 +24,14 @@ Hambúrgueres artesanais feitos com paixão. Um projeto construído com **HTML5 
 
 ```
 KB BURGER NINJA/
-├── index.html          # Estrutura semântica HTML
-├── css/
-│   └── styles.css     # Estilos com Design System
-├── js/
-│   └── main.js        # Interações JavaScript
+├── index.html          # Página principal
+├── css/                # Estilos da página e componentes
+├── js/                 # Interações JavaScript
 ├── public/
-│   └── images/        # Imagens e assets
+│   └── images/         # Imagens e ícones usados na página
+├── img/                # Imagem de prévia para este README
 ├── .gitignore         # Arquivos a ignorar no git
-└── README.md          # Este arquivo
+└── README.md           # Documentação do projeto
 ```
 
 ## ⚡ Início Rápido
